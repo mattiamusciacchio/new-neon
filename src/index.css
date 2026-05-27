@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;550;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Courier New", Courier, monospace, "Inter", ui-sans-serif, sans-serif;
+  --font-display: "Courier New", Courier, monospace, "Space Grotesk", sans-serif;
+  --font-mono: "Courier New", Courier, monospace, "JetBrains Mono", ui-monospace, monospace;
+}
+
+/* Base resets & styled defaults */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  color: #E0E0FF;
+  font-family: "Courier New", Courier, monospace;
+}
+
+/* Custom Cyberdeck Scrollbar styling */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(10, 14, 39, 0.4);
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(0, 255, 255, 0.25);
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 255, 255, 0.55);
+}
+
+/* Elegant Dark Glass Panel */
+.glass-panel {
+  background: rgba(10, 14, 39, 0.85);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+}
+
+/* Elegant Dark Glowing effects */
+.neon-magenta {
+  color: #FF00FF;
+  text-shadow: 0 0 8px rgba(255, 0, 255, 0.6);
+}
+.neon-cyan {
+  color: #00FFFF;
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.6);
+}
+
+.border-magenta {
+  border-color: #FF00FF !important;
+}
+.border-cyan {
+  border-color: #00FFFF !important;
+}
+
+/* Elegant Dark map-grid background radial gradient */
+.map-grid {
+  background-image: radial-gradient(rgba(0, 255, 255, 0.15) 1px, transparent 0);
+  background-size: 40px 40px;
+}
+
+/* Elegant Dark CRT scanline grid pattern */
+.scanline {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%,
+    rgba(0, 0, 0, 0.25) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.06),
+    rgba(0, 255, 0, 0.02),
+    rgba(0, 0, 255, 0.06)
+  );
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
+  z-index: 50;
+}
+
+/* VHS horizontal line animation scanning */
+@keyframes vhs-scan {
+  0% {
+    transform: translateY(-100%);
+  }
+  105% {
+    transform: translateY(100vh);
+  }
+}
+.animate-vhs-scan {
+  animation: vhs-scan 8s linear infinite;
+}
+
+/* Concentric Radar Ring pulse */
+@keyframes radar-pulse {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.15;
+  }
+  50% {
+    opacity: 0.45;
+  }
+  100% {
+    transform: scale(1.4);
+    opacity: 0.01;
+  }
+}
+.animate-radar-pulse {
+  animation: radar-pulse 3s cubic-bezier(0.1, 0.8, 0.3, 1) infinite;
+}
+
+/* Holographic beam sweep line on interrogation faces */
+@keyframes hacker-beams {
+  0% {
+    bottom: 0%;
+  }
+  50% {
+    bottom: 100%;
+  }
+  100% {
+    bottom: 0%;
+  }
+}
+.animate-hacker-beams {
+  animation: hacker-beams 4s ease-in-out infinite;
+}
+
+/* Custom CSS helper for slow infinite spinners */
+@keyframes spin-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.animate-spin-slow {
+  animation: spin-slow 12s linear infinite;
+}
+
+/* Subtle glowing pulse states kept for backward compatibility */
+.glow-cyan {
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.5);
+}
+.glow-magenta {
+  text-shadow: 0 0 8px rgba(255, 0, 255, 0.55);
+}
+
+/* Active touch targeting grids styling */
+select, option {
+  cursor: pointer;
+  font-family: "Courier New", Courier, monospace;
+}
+option {
+  background-color: #030614;
+  color: #f1f5f9;
+}

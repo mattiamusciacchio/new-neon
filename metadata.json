@@ -1,0 +1,6 @@
+{
+  "name": "Neon Shadows",
+  "description": "A cyberpunk noir procedural murder mystery game where you navigate through levels, investigate crime scenes, review CCTVs, hack digital trails, interview reactive NPCs, and solve the murder.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
