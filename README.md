@@ -1,20 +1,39 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# Neon Shadows - Istruzioni di Deploy su GitHub Pages
 
-# Run and deploy your AI Studio app
+Questo repository è configurato per compilare ed servire l'applicazione investigativa cyber-noir **Neon Shadows** su GitHub Pages sotto l'URL `/new-neon/`.
 
-This contains everything you need to run your app locally.
+## Come effettuare il Deploy locale su GitHub Pages
 
-View your app in AI Studio: https://ai.studio/apps/e2cb05e5-9be3-4c71-9d5c-64f17f4cc867
+Segui questa sequenza ordinata di comandi nella tua console locale per generare i file pronti e inviarli al tuo server di hosting:
 
-## Run Locally
+1. **Installa tutte le dipendenze di progetto**:
+   ```bash
+   npm install
+   ```
 
-**Prerequisites:**  Node.js
+2. **Compila il sito web statico** (genera la cartella `dist/` pronta all'uso):
+   ```bash
+   npm run build
+   ```
 
+3. **Aggiungi la cartella `dist/` al tracciamento di Git**:
+   ```bash
+   git add dist/
+   ```
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+4. **Esegui il commit dei file compilati**:
+   ```bash
+   git commit -m "Build for deployment"
+   ```
+
+5. **Invia i file al tuo repository GitHub**:
+   ```bash
+   git push
+   ```
+
+---
+
+*Configurazione tecnica applicata:*
+- **Base URL** impostato a `/new-neon/` nel file `vite.config.ts`.
+- **Script di deploy** `"deploy": "npm run build"` aggiunto nel `package.json`.
+- **Abilitazione di commit** della directory `dist/` sbloccante nel file `.gitignore`.
